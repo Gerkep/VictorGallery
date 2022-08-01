@@ -2,6 +2,7 @@ import '@nomicfoundation/hardhat-toolbox'
 import '@nomiclabs/hardhat-vyper'
 import * as dotenv from 'dotenv'
 import 'hardhat-deploy'
+import '@typechain/hardhat'
 import { HardhatUserConfig } from 'hardhat/config'
 dotenv.config()
 

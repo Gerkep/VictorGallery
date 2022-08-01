@@ -14,25 +14,13 @@ const HomePage: NextPage = () => {
   const { data: signer } = useSigner()
   const { contracts } = useDeployments()
 
-  const getOwner = async () => {
+  const getMessage = async () => {
     if (!signer || !contracts) return
     const contract = new ethers.Contract(contracts.Lock.address, contracts.Lock.abi, signer) as Lock
     try {
-      const owner = await contract.owner()
-      console.log({ owner })
+      const lockMessage = await contract.getMessage()
+      console.log({ lockMessage })
     } catch (e) {
-      console.error(e)
-    }
-  }
-
-  const withdraw = async () => {
-    if (!signer || !contracts) return
-    const contract = new ethers.Contract(contracts.Lock.address, contracts.Lock.abi, signer) as Lock
-    try {
-      const tsx = await contract.withdraw({ gasLimit: 50000 })
-      const receipt = await tsx.wait()
-      console.log({ receipt })
-    } catch (e: any) {
       console.error(e)
     }
   }
@@ -46,9 +34,7 @@ const HomePage: NextPage = () => {
         {/* Lock.sol Contract Interactions */}
         {signer && (
           <div tw="flex mt-8 items-center text-sm">
-            <div tw="text-gray-400 mr-2">Lock.sol:</div>
-            <Button onClick={() => getOwner()}>Get Owner</Button>
-            <Button onClick={() => withdraw()}>Withdraw</Button>
+            <Button onClick={() => getMessage()}>Get Owner</Button>
           </div>
         )}
       </CenterBody>
