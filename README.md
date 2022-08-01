@@ -1,5 +1,7 @@
 # ETHathon – Smart Contract & DApp Development Boilerplate
 
+
+
 ![Typescript](https://img.shields.io/badge/Typescript-blue)
 ![Hardhat](https://img.shields.io/badge/Hardhat-yellow)
 ![Next.js](https://img.shields.io/badge/Next.js-gray)
@@ -12,16 +14,7 @@ By [Dennis Zoma](https://twitter.com/dennis_zoma) 🧙‍♂️
 ![Cover Image](packages/frontend/public/images/cover.jpg)
 
 ## Disclaimer
-
-This is **work-in-progress** and there are many open tasks:
-
-- [ ] Give better instructions on how to initialize this:
-  - [ ] Where to replace name/placeholders
-  - [ ] What & Where to setup environment variabled
-  - [ ] How to deploy (to Vercel)
-- [ ] Remove packages that are not actually used
-- [ ] Make Turborepo configuration less verbose
-- [ ] Optionally integrate Chakra
+This is not my work. This is Dennis Zoma's boilerplate! I only work on top of it.
 
 ## The Stack
 
